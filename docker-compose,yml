@@ -21,10 +21,10 @@ services:
       - ./nginx/conf.d:/etc/nginx/conf.d:ro
 
     ports:
-      - "80:80"
+      - "8080:8080"
 
 networks:
   default:
-    external:
+    external: true
       name:
         web_network
