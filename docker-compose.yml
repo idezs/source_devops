@@ -20,12 +20,10 @@ services:
       - ./nginx/conf/nginx.conf:/etc/nginx/conf/nginx.conf:ro
       - ./nginx/conf.d:/etc/nginx/conf.d:ro
 
-    networks:
-      - frontend
     ports:
       - "8080:8080"
 
 networks:
-  frontend:
+  default:
     external: true
     name: web_network
